@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Rede Social - Página Principal</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 80px;
+      resize: none;
+    }
+
+    input[type="file"] {
+      margin: 10px 0;
+    }
+
+    button {
+      padding: 8px 16px;
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004c99;
+    }
+
+    .post {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 5px;
+    }
+
+    #gallery img {
+      max-width: 200px;
+      margin: 10px;
+      display: inline-block;
+      border: 2px solid #ccc;
+    }
+
+    nav {
+      margin-top: 20px;
+    }
+
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      color: #000000;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Minha Rede Social</h1>
+
+  <!-- Área de navegação -->
+  <nav>
+    <a href="#" id="btnVerFeed">Ver Feed</a>
+    <a href="#" id="btnVerGaleria">Ver Galeria</a>
+  </nav>
+
+  <!-- Formulário de criação de post -->
+  <form id="postForm">
+    <textarea id="postText" placeholder="Escreva seu post..." required></textarea><br/>
+    <input type="file" id="postImage" accept="image/*" /><br/>
+    <button type="submit">Adicionar Post</button>
+  </form>
+
+  <hr/>
+
+  <!-- Área dos posts -->
+  <div id="postsContainer"></div>
+
+  <!-- Área da galeria (inicialmente oculta) -->
+  <div id="gallery" style="display: none;"></div>
+
+  <!-- JavaScript -->
+  <script>
+    // Função para pegar os posts do localStorage
+    function getPosts() {
+      const posts = localStorage.getItem('posts');
+      return posts ? JSON.parse(posts) : [];
+    }
+
+    // Função para salvar os posts no localStorage
+    function savePosts(posts) {
+      localStorage.setItem('posts', JSON.stringify(posts));
+    }
+
+    // Adiciona post no HTML
+    function addPost(post) {
+      const container = document.getElementById('postsContainer');
+      const div = document.createElement('div');
+      div.classList.add('post');
+
+      let html = `<p>${post.text}</p>`;
+      if (post.image) {
+        html += `<img src="${post.image}" alt="Imagem do post"/>`;
+      }
+
+      div.innerHTML = html;
+      container.prepend(div);
+    }
+
+    // Renderiza todos os posts
+    function renderPosts() {
+      const container = document.getElementById('postsContainer');
+      if (!container) return;
+
+      container.innerHTML = '';
+      const posts = getPosts().reverse();
+      posts.forEach(addPost);
+    }
+
+    // Salva novo post
+    function saveNewPost(text, image) {
+      const posts = getPosts();
+      posts.push({ text, image, date: new Date().toISOString() });
+      savePosts(posts);
+      renderPosts();
+
+      // Limpa formulário
+      document.getElementById('postText').value = '';
+      document.getElementById('postImage').value = '';
+    }
+
+    // Renderiza galeria com imagens
+    function renderGallery() {
+      const gallery = document.getElementById('gallery');
+      if (!gallery) return;
+
+      const posts = getPosts();
+      gallery.innerHTML = '';
+
+      posts.forEach(post => {
+        if (post.image) {
+          const img = document.createElement('img');
+          img.src = post.image;
+          img.alt = 'Foto do post';
+          gallery.appendChild(img);
+        }
+      });
+    }
+
+    // Alterna entre feed e galeria
+    function showFeed() {
+      document.getElementById('postsContainer').style.display = 'block';
+      document.getElementById('gallery').style.display = 'none';
+      document.getElementById('postForm').style.display = 'block';
+    }
+
+    function showGallery() {
+      document.getElementById('postsContainer').style.display = 'none';
+      document.getElementById('gallery').style.display = 'block';
+      document.getElementById('postForm').style.display = 'none';
+      renderGallery();
+    }
+
+    // Evento para criar post
+    const form = document.getElementById('postForm');
+    if (form) {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const text = document.getElementById('postText').value.trim();
+        const fileInput = document.getElementById('postImage');
+
+        if (!text) {
+          alert('Escreva algo no post!');
+          return;
+        }
+
+        if (fileInput.files.length > 0) {
+          const reader = new FileReader();
+          reader.onload = () => {
+            saveNewPost(text, reader.result);
+          };
+          reader.readAsDataURL(fileInput.files[0]);
+        } else {
+          saveNewPost(text, null);
+        }
+      });
+    }
+
+    // Botões de navegação
+    document.getElementById('btnVerFeed').addEventListener('click', e => {
+      e.preventDefault();
+      showFeed();
+    });
+
+    document.getElementById('btnVerGaleria').addEventListener('click', e => {
+      e.preventDefault();
+      showGallery();
+    });
+
+    // Inicializa ao carregar
+    window.onload = () => {
+      renderPosts();
+      showFeed();
+    };
+  </script>
+</body>
+</html>

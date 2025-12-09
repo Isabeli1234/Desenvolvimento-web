@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    body {
+      margin: 0;
+      font-family: "Maven Pro", sans-serif;
+      background-color: #825447;
+    }
+
+    header {
+      color: #825447;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.5rem 0;
+    }
+
+    nav a {
+      color: #825447;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+
+    .banner {
+      background-image: ur;
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #825447;
+      text-shadow: 2px 2px 4px #ee69abd3;
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+        align-content: space-around;
+        width: 100%;
+        height: 60px;
+        background-color: #825447;
+    
+     }
+     .submenu{
+        font-family: Arial, Helvetica, sans-serif; 
+        font-size: 100%;
+        align-content: center;
+        margin-left:2%;  
+        width: 30%;
+        height: 60px;
+     }
+     a{
+        color: rgb(0, 0, 0);
+     }
+     .imagem{
+        align-content: center;
+        margin-left:20%; 
+        margin-right: 20;
+        height: auto;
+     }
+    </style>
+
+</head>
+<body style="background-color: #fffeea; color: black;">
+
+    <header>
+        <div>
+            <h1 style="font-size: 500%; font-family: Arial, Helvetica, sans-serif; "><strong><center>Doceria Amarga</mark></center></strong></h1>
+        </div>
+        <div class="menu">
+            <div class="submenu">
+                <h3><a href="segundaPgn.html">Página Inicial:</a></h3>
+            </div>
+            <div class="submenu">
+                <h3><a href="segundaPgn.html">Cardápio:</a></h3>
+            </div>
+            <div class="submenu">
+                <h3><a href="segundaPgn.html">Promoções:</a></h3>
+            </div>
+        </div>
+    </header>
+    <style>
+
+       body {
+      margin: 0;
+      font-family: "Maven Pro", sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    header {
+      background-color: #2b2b2b;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav {
+      background-color: #ff6000;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.5rem 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+
+    .banner {
+      background-image: ur;
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .banner h2 {
+      font-size: 2rem;
+      background: rgba(3, 2, 2, 0.4);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .produto {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .produto:hover {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transform: translateY(-4px);
+    }
+
+    .produto img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .produto h3 {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    .preco {
+      color: #ff6000;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    button {
+      background-color: #0ba36f;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: #08935f;
+    }
+
+
+
+  </style>
+   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<body>
+    
+
+    <section class="produtos">
+    <div class="produto">
+      <img src="doce4.jpg" >
+      <h3>Tênis </h3>
+      <p class="preco">R$ 340,90</p>
+      <p>2 x de R$170,45 sem juros</p>
+      <button onclick="comprar('Tênis Casual Masculino Puma')">Comprar</button>
+    </div>
+
+    <div class="produto">
+      <img src="https://bebercalcados.cdn.magazord.com.br/img/2024/05/produto/50152/12375565-5-3990.jpg?ims=600x600" alt="Tênis feminino PUMA Smash Platform V3">
+      <h3>Tênis feminino PUMA Smash </h3>
+      <p class="preco">R$ 359,90</p>
+      <p>2 x de R$179,95 sem juros</p>
+      <button onclick="comprar('Tênis feminino PUMA Smash')">Comprar</button>
+    </div>
+
+    <div class="produto">
+      <img src="https://images.tcdn.com.br/img/img_prod/732827/jordan_1_retro_high_og_university_blue_1235_1_a3e14954be6bea90696ba8c4057008ab.jpg" alt="Tênis Nike Air Jordan 1 Retro 7">
+      <h3>Tênis Nike Air Jordan  </h3>
+      <p class="preco">R$ 290,90 </p>
+      <p>2 x de R$145,45 sem juros</p>
+      <button onclick="comprar('Tênis Nike Air Jordan')">Comprar</button>
+    </div>
+
+    <div class="produto">
+      <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/fb4c28cdca314d488ef5013fed683e16_9366/Tenis_Corrida_Runfalcon_5_Preto_JJ7823_01_00_standard.jpg" alt="Tênis Corrida Runfalcon 5">
+      <h3>Tênis Corrida Runfalcon 5 </h3>
+      <p class="preco">R$ 399,90</p>
+      <p>3 x de R$133,30 sem juros</p>
+      <button onclick="comprar('Tênis Corrida Runfalcon 5')">Comprar</button>
+    </div>
+    
+  </section>
+    
+     <script>
+    
+    function comprar(produto){
+      alert("Você adiciomnou o " + produto +" ao carrinho de compras!");
+      const lista = document.getElementById("comprar");
+    }
+
+    </script>
+    <br>
+
+
+    <br>
+
+     <footer>
+        <p>&copy; Os melhores doces, feitos com amor!!</p>
+     </footer>
+
+</body>
+</html>

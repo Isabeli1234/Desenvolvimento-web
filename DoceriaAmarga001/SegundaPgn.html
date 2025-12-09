@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    body {
+      margin: 0;
+      font-family: "Maven Pro", sans-serif;
+      background-color: #825447;
+    }
+
+    header {
+      color: #825447;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.5rem 0;
+    }
+
+    nav a {
+      color: #825447;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+
+    .banner {
+      background-image: ur;
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #825447;
+      text-shadow: 2px 2px 4px #ee69abd3;
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+        align-content: space-around;
+        width: 100%;
+        height: 60px;
+        background-color: #825447;
+    
+     }
+     .submenu{
+        font-family: Arial, Helvetica, sans-serif; 
+        font-size: 100%;
+        align-content: center;
+        margin-left:2%;  
+        width: 30%;
+        height: 60px;
+     }
+     a{
+        color: rgb(0, 0, 0);
+     }
+      .imagem{
+      align-content: center;
+      margin-left:0%; 
+      margin-right: 60%;
+      margin-top: 1%;
+      height: auto;
+      border-radius: 100%;
+      width: 90%;
+      height: 10%;
+     }
+
+     .images{
+      align-content: center;
+      margin-left:0%; 
+      margin-right: 60%;
+      margin-top: 60%;
+      height: auto;
+      border-radius: 100%;
+      width: 90%;
+      height: 10%;
+     }
+     .banner {
+      background-image: ur;
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .banner h2 {
+      font-size: 2rem;
+      background: rgba(3, 2, 2, 0.4);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .produto {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .produto:hover {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transform: translateY(-4px);
+    }
+
+    .produto img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .produto h3 {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    .preco {
+      color: #825447;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    button {
+      background-color: #ee69abd3;
+      color: #000;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: #08935f;
+    }
+    </style>
+
+</head>
+<body style="background-color: #fffeea; color: black;">
+  
+
+    <header>
+        <div>
+            <h1 style="font-size: 500%; font-family: Arial, Helvetica, sans-serif; "><strong><center>Doceria Amarga</mark></center></strong></h1>
+        </div>
+        <div class="menu">
+            <div class="submenu">
+                <h3><a href="PrimeiraPgn.html">Página Inicial:</a></h3>
+            </div>
+            <div class="submenu">
+                <h3><a href="SegundaPgn.html">Cardápio:</a></h3>
+            </div>
+            <div class="submenu">
+                <h3><a href="TerceiraPgn.html">Promoções:</a></h3>
+            </div>
+        </div>
+    </header>
+    <section class="produtos">
+    <div class="produto">
+      <img src="dode uva.jpg">
+      <h3>Bombom de Travessa Gourmet</h3>
+      <p class="preco">R$60,00</p>
+      <button onclick="comprar('Doce de uva')">Comprar</button>
+    </div>
+
+    <div class="produto">
+      <img src="brigagero12.jpg">
+      <h3>Brigadeiros Gourmet</h3>
+      <p class="preco">R$100,00</p>
+      <button onclick="comprar('Brigadeiros')">Comprar</button>
+    </div>
+
+    <div class="produto">
+      <img src="panetone 44.jpg">
+      <h3>Panetone de Avelã Gourmet</h3>
+      <p class="preco">300,00</p>
+      <button onclick="comprar('Panetone')">Comprar</button>
+    </div>
+
+    <div class="produto">
+      <img src="bolo2 - Copia.jpg">
+      <h3>Bolo de Bombom Gourmet</h3>
+      <p class="preco">R$250,00</p>
+      <button onclick="comprar('Bolo')">Comprar</button>
+    </div>
+    
+     <div class="produto">
+      <img src="pudim - Copia.jpg">
+      <h3>Quindim Gourmet</h3>
+      <p class="preco">R$120,00</p>
+      <button onclick="comprar('Quindim')">Comprar</button>
+    </div>
+    
+    <div class="produto">
+      <img src="morango doce - Copia.jpg">
+      <h3>Bombom de Morango Gourmet</h3>
+      <p class="preco">R$40,00</p>
+      <button onclick="comprar('Brigadeiro')">Comprar</button>
+    </div>
+    
+  </section>
+
+
+        </div>
+    </header>
+    <section class="produtos">
+    <div class="produto">
+      <img src="doces.webp">
+      <h3>Bombom de Travessa Gourmet</h3>
+      <p class="preco">R$60,00</p>
+      <button onclick="comprar('Doce de uva')">Comprar</button>
+    </div>
+
+    <div class="produto">
+      <img src="do">
+      <h3>Brigadeiros Gourmet</h3>
+      <p class="preco">R$100,00</p>
+      <button onclick="comprar('Brigadeiros')">Comprar</button>
+    </div>
+
+    <div class="produto">
+      <img src="doce de leite.avif">
+      <h3>Panetone de Avelã Gourmet</h3>
+      <p class="preco">300,00</p>
+      <button onclick="comprar('Panetone')">Comprar</button>
+    </div>
+
+    <div class="produto">
+      <img src="doces2.jpeg">
+      <h3>Bolo de Bombom Gourmet</h3>
+      <p class="preco">R$250,00</p>
+      <button onclick="comprar('Bolo')">Comprar</button>
+    </div>
+    
+     <div class="produto">
+      <img src="doce 6.png">
+      <h3>Quindim Gourmet</h3>
+      <p class="preco">R$120,00</p>
+      <button onclick="comprar('Quindim')">Comprar</button>
+    </div>
+    
+    <div class="produto">
+      <img src="doce5.jpeg">
+      <h3>Bombom de Morango Gourmet</h3>
+      <p class="preco">R$40,00</p>
+      <button onclick="comprar('Brigadeiro')">Comprar</button>
+    </div>
+    
+  </section>
+  
+        </div>
+    </header>
+    <section class="produtos">
+    <div class="produto">
+      <img src="brigadeiro de cereja.jpg">
+      <h3>Bombom de Travessa Gourmet</h3>
+      <p class="preco">R$60,00</p>
+      <button onclick="comprar('Doce de uva')">Comprar</button>
+    </div>
+
+    <div class="produto">
+      <img src="brigadeiro de limão.jpg">
+      <h3>Brigadeiros Gourmet</h3>
+      <p class="preco">R$100,00</p>
+      <button onclick="comprar('Brigadeiros')">Comprar</button>
+    </div>
+
+    <div class="produto">
+      <img src="bombom de pistache.webp">
+      <h3>Panetone de Avelã Gourmet</h3>
+      <p class="preco">300,00</p>
+      <button onclick="comprar('Panetone')">Comprar</button>
+    </div>
+
+    <div class="produto">
+      <img src="bolo2 - Copia.jpg">
+      <h3>Bolo de Bombom Gourmet</h3>
+      <p class="preco">R$250,00</p>
+      <button onclick="comprar('Bolo')">Comprar</button>
+    </div>
+    
+     <div class="produto">
+      <img src="pudim - Copia.jpg">
+      <h3>Quindim Gourmet</h3>
+      <p class="preco">R$120,00</p>
+      <button onclick="comprar('Quindim')">Comprar</button>
+    </div>
+    
+    <div class="produto">
+      <img src="morango doce - Copia.jpg">
+      <h3>Bombom de Morango Gourmet</h3>
+      <p class="preco">R$40,00</p>
+      <button onclick="comprar('Brigadeiro')">Comprar</button>
+    </div>
+    
+  </section>
+
+ 
+</body>
+</html>

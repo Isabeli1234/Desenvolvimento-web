@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<section id="esportivo"></section>
+ <style>
+
+       body {
+      margin: 0;
+      font-family: "Maven Pro", sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    header {
+      background-color: #2b2b2b;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    .banner {
+      background-image: ur;
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .banner h2 {
+      font-size: 2rem;
+      background: rgba(3, 2, 2, 0.4);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .produto {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .produto:hover {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transform: translateY(-4px);
+    }
+
+    .produto img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .produto h3 {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    .preco {
+      color: #ff6000;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    button {
+      background-color: #0ba36f;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: #08935f;
+    }
+
+
+  </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Sapatos</title>
+</head>
+<body>
+
+    <section class="produtos">
+    <div class="produto">
+      <img src="https://www.imperialoutlet.com.br/cdn/shop/files/ChuteiraNikeSocietyAirZoomMercurialVapor16EliteTF18_800x.png?v=1725050589" alt="Chuteira Society Superfly 9 Club TF Masculina Nike DJ ">
+      <h3>Chuteira Nike Air</h3>
+      <p class="preco">R$ 539,99</p>
+      <p>2 x de R$269,95 sem juros</p>
+      <button onclick="comprar('Chuteira Nike Air')">Comprar</button>
+    </div>
+
+    <div class="produto">
+      <img src="https://acdn-us.mitiendanube.com/stores/003/834/248/products/chuteira-society-nike-mercurial-superfly-7-mbappe-x-bondy5-ca2e8d41e823b76dd716812201630745-1024-1024-46c2341594e2cea19316981608777864-1024-1024.jpg" alt="Chuteira Nike Zoom Mercurial Superfly 9 Academy Campo">
+      <h3>Chuteira Nike Mercurial  </h3>
+      <p class="preco">R$ 359,90</p>
+      <p>2 x de R$179,95 sem juros</p>
+      <button onclick="comprar('Chuteira Nike Mercurial')">Comprar</button>
+    </div>
+
+    <div class="produto">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_2X_629036-MLB82090181466_022025-F-chuteira-futebol-de-campo-puma-future-8-play-neymar-original.webp" alt="Chuteira Futebol De Campo Puma Future 8 Play Neymar Original">
+      <h3>Chuteira Futebol De Campo Puma  Future       Neymar 10  </h3>
+      <p class="preco">R$ 599,99 </p>
+      <p>2 x de R$145,45 sem juros</p>
+      <button onclick="comprar('Chuteira Futebol De Campo Puma Future Neymar')">Comprar</button>
+    </div>
+
+    <div class="produto">
+      <img src="https://www.imperialoutlet.com.br/cdn/shop/products/b1c140b458.jpg?v=1672326287" alt="Chuteira Futebol De Campo Puma">
+      <h3>Chuteira Campo Puma </h3>
+      <p class="preco">R$ 499,90</p>
+      <button onclick="comprar('Chuteira Campo Puma')">Comprar</button>
+    </div>
+    
+     <div class="produto">
+      <img src="https://acdn.mitiendanube.com/stores/002/152/760/products/chuteira-nike-mercurial-air-zoom-campo-branca-laranja-original1-653ceb1836e640cf2616938495985851-1024-1024.jpeg" alt="Chuteira Umbro PRO 5 BUMP STP Masculino Verde">
+      <h3> Chuteira Nike Mercurial </h3>
+      <p class="preco">R$ 649,90</p>
+      <button onclick="comprar(' Chuteira Nike Mercurial')">Comprar</button>
+    </div>
+    
+    <div class="produto">
+      <img src="https://shopgazetinha.com.br/wp-content/uploads/2023/06/3593ec48.jpeg" alt="Chuteira Adidas">
+      <h3>Chuteira Adidas </h3>
+      <p class="preco">R$ 449,90</p>
+      <button onclick="comprar('Chuteira Adidas')">Comprar</button>
+    </div>
+    
+  </section>
+    <script>
+    
+    function comprar(produto){
+      alert("Você adiciomnou o " + produto +" ao carrinho de compras!");
+      const lista = document.getElementById("comprar");
+    }
+
+    </script>
+</body>
+</html>
